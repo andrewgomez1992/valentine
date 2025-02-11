@@ -62,8 +62,8 @@ function DatesCard({ onContinue, onBack }) {
         animate="visible"
         className="dates-text"
       >
-        I know we&apos;ve only been on a few dates but I can&apos;t wait for
-        many more.
+        I know we&apos;ve only been on a few dates but I have a feeling theres
+        going to be many more.
       </motion.h2>
       <div className="button-group">
         <button className="continue-btn" onClick={onContinue}>
