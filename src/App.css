@@ -23,6 +23,7 @@ body {
   background: rgba(0, 0, 0, 0.85);
   border: 3px solid transparent;
   border-radius: 16px;
+  cursor: pointer;
   padding: 40px;
   text-align: center;
   width: 100%;
@@ -115,4 +116,20 @@ button:hover,
   padding: 10px;
   border-radius: 8px;
   margin: 20px 0;
+}
+
+.hearts-confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* So it doesn't block any interactions */
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
 }

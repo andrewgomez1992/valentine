@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import spongebob from "./assets/spongebob.png";
 import "./App.css";
+import HeartsConfetti from "./HeartsMotion";
 
 // Update fade-in variant to slow the text reveal
 const fadeIn = {
@@ -138,10 +139,10 @@ function DetailsCard({ onBack }) {
         animate="visible"
         className="details-text"
       >
-        Thank you!
+        FUCK YEAH!
       </motion.h2>
       <motion.p variants={fadeIn} initial="hidden" animate="visible">
-        Please text me with the code:
+        Text me this code babe lol:
       </motion.p>
       <motion.div
         variants={fadeIn}
@@ -149,7 +150,7 @@ function DetailsCard({ onBack }) {
         animate="visible"
         className="code"
       >
-        VAL2025
+        MYHEART2025
       </motion.div>
       <motion.p variants={fadeIn} initial="hidden" animate="visible">
         I&apos;ll send you further details.
@@ -290,7 +291,12 @@ function App() {
       {stage === "question" && (
         <QuestionCard onYes={handleYes} onNo={handleNo} onBack={handleBack} />
       )}
-      {stage === "details" && <DetailsCard onBack={handleBack} />}
+      {stage === "details" && (
+        <>
+          <HeartsConfetti />
+          <DetailsCard onBack={handleBack} />
+        </>
+      )}
       {stage === "reject1" && (
         <RejectedStep1 onContinue={handleReject1Continue} onBack={handleBack} />
       )}
