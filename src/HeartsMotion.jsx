@@ -15,7 +15,7 @@ function HeartsConfetti() {
           <motion.div
             key={index}
             className="heart"
-            initial={{ y: "-10%", opacity: 0, scale: randomScale }}
+            initial={{ y: "10%", opacity: 0, scale: randomScale }}
             animate={{ y: "110%", opacity: 1 }}
             transition={{
               delay: randomDelay,

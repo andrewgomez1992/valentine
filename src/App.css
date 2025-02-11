@@ -10,7 +10,7 @@ body {
 /* Overall app styling – black background */
 .app {
   background-color: #000;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,6 +116,10 @@ button:hover,
   padding: 10px;
   border-radius: 8px;
   margin: 20px 0;
+}
+
+.ps-text {
+  margin-bottom: 30px;
 }
 
 .hearts-confetti {

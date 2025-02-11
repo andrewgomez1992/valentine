@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { motion } from "framer-motion";
 import spongebob from "./assets/spongebob.png";
@@ -78,8 +77,18 @@ function DatesCard({ onContinue, onBack }) {
   );
 }
 
-// FairytaleCard Component – new card with the fairytale message
+// FairytaleCard Component – new card with the fairytale message and p.s. text
 function FairytaleCard({ onContinue, onBack }) {
+  const [showPS, setShowPS] = useState(false);
+
+  const handleContinue = () => {
+    if (!showPS) {
+      setShowPS(true);
+    } else {
+      onContinue();
+    }
+  };
+
   return (
     <div className="card fairytale-card">
       <motion.h2
@@ -90,8 +99,19 @@ function FairytaleCard({ onContinue, onBack }) {
       >
         This is the part where we make our fairytale come true.
       </motion.h2>
+      {showPS && (
+        <motion.p
+          variants={fadeIn}
+          initial="hidden"
+          animate="visible"
+          className="ps-text"
+          style={{ fontSize: "1rem", marginTop: "10px" }}
+        >
+          You are so hot btw.
+        </motion.p>
+      )}
       <div className="button-group">
-        <button className="continue-btn" onClick={onContinue}>
+        <button className="continue-btn" onClick={handleContinue}>
           Continue
         </button>
         <button className="back-btn" onClick={onBack}>
